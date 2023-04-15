@@ -39,12 +39,12 @@ function checkAnswer(currentLevel) {
     }
   } else {
     // wrong answer
-    $(`body`).addClass("game-over");
+    $("body").addClass("game-over");
     playSound("wrong");
     $("h1").text(`Game Over, Press Any Key to Restart`);
 
     setTimeout(function () {
-      $(`body`).removeClass("game-over");
+      $("body").removeClass("game-over");
     }, 200);
     startOver();
   }
@@ -69,6 +69,7 @@ function nextSequence() {
   playSound(randomChosenColour);
 }
 
+// Reset game
 function startOver() {
   level = 0;
   gamePattern = [];
